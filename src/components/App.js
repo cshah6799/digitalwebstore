@@ -12,7 +12,7 @@ import Dashboard from '../pages/Dashboard'
 
 function App() {
   const { data: movies, movieIsPending, movieError } = useFetch(
-    'https://raw.githubusercontent.com/cshah6799/Web-Store/main/movies1.json',
+    'https://raw.githubusercontent.com/cshah6799/Web-Store/main/movies2.json',
   )
   const { data: tvs, tvsIsPending, tvsError } = useFetch(
     'https://raw.githubusercontent.com/cshah6799/Web-Store/main/tvs.json',

@@ -1,12 +1,14 @@
 import { useParams } from 'react-router'
-import useFetch from '../components/useFetch'
 import DetailContainer from '../components/DetailContainer'
 
-const Detail = () => {
+const Detail = ({ movies, tvs }) => {
   const { type, id } = useParams()
-  const { data, error, isPending } = useFetch(
-    'https://online-movie-store-back-end.herokuapp.com/' + type + '/' + id,
-  )
+  let data
+  if (type === 'movie') {
+    data = movies?.find((movie) => movie._id === id)
+  } else {
+    data = tvs?.find((tv) => tv._id === id)
+  }
 
   return <div className="detail">{data && <DetailContainer data={data} />}</div>
 }
