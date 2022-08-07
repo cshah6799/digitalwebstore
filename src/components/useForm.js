@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useHistory } from 'react-router'
 
 const useForm = (validateInfo) => {
@@ -26,10 +26,11 @@ const useForm = (validateInfo) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setErrors(validateInfo(values))
-    fetch('', {
+    fetch('http://localhost:8085/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(values),
+
     }).then((res) => {
       if (res.ok) {
         alert('You have successfully registered!')

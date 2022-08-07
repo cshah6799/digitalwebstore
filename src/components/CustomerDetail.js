@@ -13,7 +13,7 @@ const CustomerDetail = ({ data }) => {
       console.log(users)
       users.forEach((element) => {
         console.log(element)
-        if (element.email == data) {
+        if (element.email === data) {
           setFirstName(element.firstName)
           setLastName(element.lastName)
           setRole(element.role)
@@ -23,10 +23,7 @@ const CustomerDetail = ({ data }) => {
 
   return (
     <div className="CustomerDetail text-center text-dark">
-      <p>First Name: {firstName}</p>
-      <p>Last Name: {lastName}</p>
-      <p>Email: {data}</p>
-      <p>Role: {role}</p>
+      <p> Hello: {data}</p>
     </div>
   )
 }
