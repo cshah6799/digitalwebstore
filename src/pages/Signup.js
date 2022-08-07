@@ -1,7 +1,6 @@
 import { Form, Button, Col, Row } from 'react-bootstrap'
 import useForm from '../components/useForm'
 import validateInfo from '../components/validateInfo'
-import { useState } from 'react'
 
 const Signup = () => {
   const { handleChange, values, handleSubmit, errors } = useForm(validateInfo)
@@ -9,7 +8,7 @@ const Signup = () => {
   return (
     <div className="signup">
       <h1 className="text-center text-dark">Sign up</h1>
-      <Form onSubmit={handleSubmit}>
+      <Form>
         <Row className="justify-content-md-center">
           <Form.Group className="mb-3" as={Col} md="3">
             <Form.Label>First Name</Form.Label>
@@ -96,7 +95,7 @@ const Signup = () => {
           </Form.Group>
         </Row>
         <Row className="justify-content-md-center mb-5">
-          <Button type="submit" className="btn-primary">
+          <Button type="submit" className="btn-primary" onClick={handleSubmit}>
             Register
           </Button>
         </Row>
