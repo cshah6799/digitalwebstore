@@ -15,7 +15,7 @@ function App() {
     'https://backendwithjava.herokuapp.com/movies',
   )
   const { data: tvs, tvsIsPending, tvsError } = useFetch(
-    'http://localhost:8085/tvs',
+    'https://backendwithjava.herokuapp.com/tvs',
   )
 
   return (
