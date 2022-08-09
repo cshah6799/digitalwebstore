@@ -12,7 +12,7 @@ import Dashboard from '../pages/Dashboard'
 
 function App() {
   const { data: movies, movieIsPending, movieError } = useFetch(
-    'https://backendwithjava.herokuapp.com/movies',
+    'http://localhost:8085/movies',
   )
   const { data: tvs, tvsIsPending, tvsError } = useFetch(
     'http://localhost:8085/tvs',
