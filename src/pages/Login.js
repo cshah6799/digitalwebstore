@@ -11,7 +11,7 @@ const Login = () => {
     e.preventDefault()
     const login = { email, password }
 
-    fetch('http://localhost:8085/auth', {
+    fetch('https://backendwithjava.herokuapp.com/auth', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(login),
